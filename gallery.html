@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Image Galley</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="gallery.js"></script>
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+    <script type="text/javascript" src="../jquery-3.3.1.js"></script>
+    <script>
+        $("document").ready(function() {
+            $(".small-images img").on("click", borderon);
+        });
+
+        function borderon(evt) {
+            $(this).toggleClass("highlighted");
+        }
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="wrapper">
+        <section class="ImageViewer">
+            <div class="bigimg-container">
+                <img class="big-image">
+                <i class="fas fa-search-plus" id="zoom"></i>
+            </div>
+            <div class="small-images">
+                <img src="imgs/img1.jpg" data-bigimgsrc="img1_big.jpg">
+                <img src="imgs/img2.jpg" data-bigimgsrc="img2_big.jpg">
+                <img src="imgs/img3.jpg" data-bigimgsrc="img3_big.jpg">
+                <img src="imgs/img4.jpg" data-bigimgsrc="img4_big.jpg">
+            </div>
+        </section>
+        <aside class="specifications">
+            <div class="prod-des">
+                <h1>MacBook Pro</h1>
+                <p>MacBook Pro 13 är mer kompakt än tidigare och har enastående prestanda. Oavsett om du är en aspirerande digital konstnär eller upptagen chef, kommer kraften av 7:e gen. Intel processor, den klara Retina-skärmen och snabba anslutningen
+                    att imponera.
+                </p>
+                <ul>
+                    <li>Intel® Core™ i5, 2.3 GHz</li>
+                    <li>13,3" Retina-skärm</li>
+                    <li>8 GB RAM, 128 GB SSD</li>
+                </ul>
+            </div>
+            <div class="product-color">
+                <h2>Color</h2>
+
+                <div class="color-choose">
+                    <div class="black"></div>
+                    <div class="blue"></div>
+                    <div class="pink"></div>
+                </div>
+            </div>
+            <div class="product-price">
+                <span>7900,00 KR</span>
+                <a href="#" class="cart-btn">Add to cart</a>
+            </div>
+        </aside>
+        <section class="overlay">
+            <img class="overlay-image">
+            <i class="fas fa-angle-left" id="prevImg"> </i>
+            <i class="fas fa-angle-right" id="nextImg"></i>
+        </section>
+    </main>
+</body>
+
+</html>
